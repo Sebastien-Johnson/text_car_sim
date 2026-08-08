@@ -33,7 +33,8 @@ type dimensions struct {
 	width float32
 	fTrack float32
 	rTrack float32
-	weightDistro float32
+	frWeightDistro float32
+	lrWeightDistro float32
 	fAxleWeight float32
 	rAxleWeight float32
 }
@@ -126,18 +127,3 @@ type rotors struct {
 	width int
 }
 
-func brakeBias() int {
-	// axle weights
-	// master cyl dia
-	// disc diameter
-	// piston count
-	// pedal angle
-}
-
-func speedByGear() struct {
-	// ratio, fd, tire dia
-}
-
-func aeroTopSpeed() struct {
-	// weight, power, cda
-}
