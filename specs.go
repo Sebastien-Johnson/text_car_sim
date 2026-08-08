@@ -14,6 +14,7 @@ type performance struct {
 	aeroTopSpeed struct
 	COG struct
 	rollCenter struct
+	susFrequency struct
 }
 
 type rulesets struct {
@@ -33,8 +34,8 @@ type dimensions struct {
 	fTrack float32
 	rTrack float32
 	weightDistro float32
-	fAxle float32
-	rAxle float32
+	fAxleWeight float32
+	rAxleWeight float32
 }
 
 type powerplant struct {
@@ -76,7 +77,7 @@ type wheel struct {
 
 type tire struct {
 	width int
-	innerDia float32
+	innerDia int
 	outterDia float32
 }
 
@@ -105,4 +106,38 @@ type ratios struct {
 	eighth float32
 	ninth float32
 	tenth float32
+}
+
+type brakes struct {
+	rotors int
+	masterCylDia int
+	pedalRatio int
+	fPistons calipers
+	rPistons calipers
+}
+
+type calipers struct {
+	pistonCount int
+	pistonDiameter int
+}
+
+type rotors struct {
+	diameter int
+	width int
+}
+
+func brakeBias() int {
+	// axle weights
+	// master cyl dia
+	// disc diameter
+	// piston count
+	// pedal angle
+}
+
+func speedByGear() struct {
+	// ratio, fd, tire dia
+}
+
+func aeroTopSpeed() struct {
+	// weight, power, cda
 }
